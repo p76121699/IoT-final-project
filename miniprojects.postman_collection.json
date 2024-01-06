@@ -1,0 +1,665 @@
+{
+	"info": {
+		"_postman_id": "c9413663-05ef-43e8-ab59-2fcff547aa5a",
+		"name": "miniprojects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30667611"
+	},
+	"item": [
+		{
+			"name": "sm_sensor_1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=2",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:ae xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"sm_sensor_1\">\n        <api>semantic</api>\n        <lbl>Type/semantic Category/temperature Location/home</lbl>\n        <rr>false</rr>\n    </m2m:ae>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sm_DATA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"sm_DATA\"></m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/sm_sensor_1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"sm_sensor_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AE-EV-Chargers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:ae xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"AE-EV-Chargers\" >\n    <api>app-sensor</api>\n    <lbl>Type/sensor Category/temperature Location/home</lbl>\n    <rr>True</rr>\n</m2m:ae>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-DATA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"USER-DATA\">\n    <rr>True</rr>\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "p76",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"p76\">\n    <rr>True</rr>\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-INFO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"USER-INFO\">\n    <rr>True</rr>\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p76",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p76"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSACATIONS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"TRANSACATIONS\">\n    <rr>True</rr>\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p76",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p76"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>application/xml</cnf>\n    <con>&lt;obj&gt;&lt;int name=&quot;balance&quot; val=&quot;2000&quot;/&gt;&lt;/obj&gt;</con>\n    <rr>True</rr>\n</m2m:cin>\n\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p76/TRANSACATIONS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p76",
+						"TRANSACATIONS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>application/xml</cnf>\n    <con>&lt;obj&gt;&lt;str name=&quot;password&quot; val=&quot;p76&quot;/&gt;&lt;/obj&gt;</con>\n    <rr>True</rr>\n</m2m:cin>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p76/USER-INFO",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p76",
+						"USER-INFO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "p99",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"p99\">\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-INFO_p99",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"USER-INFO\">\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSACATIONS_p99",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cnt xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"TRANSACATIONS\">\n</m2m:cnt>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "balance_p99",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>application/xml</cnf>\n    <con>\n        &lt;obj&gt;\n            &lt;int name=&quot;balance&quot; val=&quot;1000&quot;/&gt;\n        &lt;/obj&gt;\n    </con>\n</m2m:cin>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p99/TRANSACATIONS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p99",
+						"TRANSACATIONS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password_p99",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>application/xml</cnf>\n    <con>\n        &lt;obj&gt;\n            &lt;str name=&quot;password&quot; val=&quot;p99&quot;/&gt;\n        &lt;/obj&gt;\n    </con>\n</m2m:cin>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/AE-EV-Chargers/USER-DATA/p99/USER-INFO",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"AE-EV-Chargers",
+						"USER-DATA",
+						"p99",
+						"USER-INFO"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
